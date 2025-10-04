@@ -1,0 +1,62 @@
+{
+  "app_name": "EQR教育",
+
+  "home_page": "主页",
+  "learn": "学习",
+
+  "solutions": "解决方案",
+  "solution_1": "解决方案 1",
+  "solution_steps": "解题步骤：",
+  "want_to_try_similar": "想尝试类似的练习吗？",
+  "new_exercise": "新练习",
+
+  "solution": "解决方案",
+  "solution_not_found": "未找到解决方案",
+  "which_exercise": "选择哪个练习？",
+  "try_again_exercise": "再来一题",
+
+  "exercises": "练习",
+  "other_exercises": "其他练习",
+  "exercise": "练习",
+  "exercise_plus": "练习 - PLUS",
+  "challenge": "挑战",
+
+  "please_enter_answer": "请输入您的答案：",
+  "enter_number_answer": "输入数字答案",
+  "submit_answer": "提交答案",
+
+  "great_job": "太棒了！",
+  "your_answer": "您的答案",
+  "correct_answer": "正确答案",
+  "vm_executed_steps": "VM执行了 {steps} 条指令",
+
+  "try_again": "再来一题",
+
+  "scan_qr_code": "扫描二维码",
+  "scan_cancelled": "扫描已取消",
+  "invalid_qr_format": "无效的二维码格式",
+  "failed_to_start_scanner": "启动扫描器失败：{error}",
+
+  "vm_execution_summary": "虚拟机执行摘要",
+  "total_exercises": "总练习数",
+  "successful_exercises": "成功练习数",
+  "success_rate": "成功率",
+  "exercise_result": "练习 {number}",
+  "substituted_expression": "替换后表达式",
+  "execution_valid": "执行有效",
+  "execution_error": "执行错误",
+
+  "operator_plus": "加",
+  "operator_minus": "减",
+  "operator_multiply": "乘",
+  "more_operands": "混合运算",
+
+  "back": "返回",
+  "home": "主页",
+  "next": "下一个",
+  "previous": "上一个",
+  "ok": "确定",
+  "cancel": "取消",
+  "yes": "是",
+  "no": "否"
+}

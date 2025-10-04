@@ -1,0 +1,62 @@
+{
+  "app_name": "EQR Education",
+
+  "home_page": "Home Page",
+  "learn": "Learn",
+
+  "solutions": "Solutions",
+  "solution_1": "Solution 1",
+  "solution_steps": "Solution Steps:",
+  "want_to_try_similar": "Want to try similar exercise?",
+  "new_exercise": "New exercise",
+
+  "solution": "Solution",
+  "solution_not_found": "Solution not found",
+  "which_exercise": "Which exercise?",
+  "try_again_exercise": "Try Again",
+
+  "exercises": "Exercises",
+  "other_exercises": "Other exercises",
+  "exercise": "Exercise",
+  "exercise_plus": "Exercise - PLUS",
+  "challenge": "Challenge",
+
+  "please_enter_answer": "Please enter your answer:",
+  "enter_number_answer": "Enter number answer",
+  "submit_answer": "Submit Answer",
+
+  "great_job": "Great job!",
+  "your_answer": "Your answer",
+  "correct_answer": "Correct answer",
+  "vm_executed_steps": "VM executed {steps} steps",
+
+  "try_again": "Try Again",
+
+  "scan_qr_code": "Scan QR Code",
+  "scan_cancelled": "Scan cancelled",
+  "invalid_qr_format": "Invalid QR code format",
+  "failed_to_start_scanner": "Failed to start scanner: {error}",
+
+  "vm_execution_summary": "VM Execution Summary",
+  "total_exercises": "Total exercises",
+  "successful_exercises": "Successful exercises",
+  "success_rate": "Success rate",
+  "exercise_result": "Exercise {number}",
+  "substituted_expression": "Substituted expression",
+  "execution_valid": "Execution valid",
+  "execution_error": "Execution error",
+
+  "operator_plus": "plus",
+  "operator_minus": "minus",
+  "operator_multiply": "multiply",
+  "more_operands": "more operands",
+
+  "back": "Back",
+  "home": "Home",
+  "next": "Next",
+  "previous": "Previous",
+  "ok": "OK",
+  "cancel": "Cancel",
+  "yes": "Yes",
+  "no": "No"
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:autoSizeMaxTextSize="18sp"
+        android:autoSizeMinTextSize="8sp"
+        android:text="Welcome to QRappJS" />
+
+    <TextView
+        android:id="@+id/textFormat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:autoSizeMaxTextSize="18sp"
+        android:autoSizeMinTextSize="8sp"
+        android:text="Please be ready to scan the eQRcode" />
+
+    <TextView
+        android:id="@+id/hexContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:autoSizeMaxTextSize="18sp"
+        android:autoSizeMinTextSize="8sp"
+        android:text="Please notice that if you don't have a VM to read the QRcode, a internet connection might be needed to download it" />
+
+
+    <Button
+        android:id="@+id/scanBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="30sp"
+        android:backgroundTint="#0F9D58"
+        android:layout_gravity="center"
+        android:text="Scan"/>
+
+</LinearLayout>
