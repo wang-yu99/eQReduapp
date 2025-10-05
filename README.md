@@ -5,7 +5,7 @@
 The **eQR Educational App** is a mathematics learning tool designed for **elementary school students**. By scanning special educational eQR codes, students can access detailed solution steps for math exercises and practice related exercises to consolidate their mathematical knowledge.
 
 **How to run the app**
-scan the educational eQRcode:![edu QRcode](./img/edu_qrcode.png)
+- Scan the educational eQRcode:![edu QRcode](./img/edu_qrcode.png)
 
 ---
 
@@ -30,7 +30,7 @@ scan the educational eQRcode:![edu QRcode](./img/edu_qrcode.png)
 - Click **solutions cards** to view detailed solutions
 - Click **"Other exercises"** for practice mode
 - Use **top buttons** to switch language, or going back to QR Code Scanner Screen
-![Home Page](./img/homepage.png)
+![Home Page](./img/home_page.png)
 
 ---
 
@@ -49,7 +49,7 @@ scan the educational eQRcode:![edu QRcode](./img/edu_qrcode.png)
 
 ### 4. Exercise Selection Screen
 
-**Function:** Choose practice type - **plus**, **minus**, or **more operations**.
+**Function:** Choose exercise type - **plus**, **minus**, or **more operations**.
 **Usage:**
 - Click the operation type button
 - Start practicing that type of exercise
@@ -80,6 +80,4 @@ scan the educational eQRcode:![edu QRcode](./img/edu_qrcode.png)
 ## Multi-language Support
 
 The app supports **multi-language interfaces**. Switch languages in the **upper right corner** of the home page.
-**Switch languages:**
-
 ![Language Selector View](./img/language_selector.png)
