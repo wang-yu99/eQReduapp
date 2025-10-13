@@ -7,10 +7,10 @@ import java.io.EOFException
  * Represents parsed educational content from QR code
  */
 data class IntermediateLanguage(
-    val labels: Map<String, String>,                    // UI display labels
-    val randGenerators: Map<String, Pair<Int, Int>>,   // Random variable generators
-    val solutions: List<Solution>,                      // Teaching solutions
-    val exercises: List<Exercise>                       // Mathematical exercises
+    val labels: Map<String, String>,
+    val randGenerators: Map<String, Pair<Int, Int>>,
+    val solutions: List<Solution>,
+    val exercises: List<Exercise>
 ) {
     data class Solution(val question: String, val steps: String, val tags: List<String>)
     data class Exercise(val expression: String, val tags: List<String>)
@@ -21,7 +21,7 @@ data class IntermediateLanguage(
  * Decodes binary data from QR code into IntermediateLanguage structure
  */
 class QRBinaryDecoder(private val byteArray: ByteArray) {
-    private val reader = BitReader(byteArray, startOffsetBits = 22)
+    private lateinit var reader: BitReader
     private val labels = mutableMapOf<String, String>()
     private val randGenerators = mutableMapOf<String, Pair<Int, Int>>()
     private val solutions = mutableListOf<IntermediateLanguage.Solution>()
@@ -29,6 +29,10 @@ class QRBinaryDecoder(private val byteArray: ByteArray) {
 
     fun decode(): IntermediateLanguage {
         try {
+            // Dynamic Calculation of Starting Offset
+            val startOffset = calculateDataStartOffset(byteArray)
+            reader = BitReader(byteArray, startOffsetBits = startOffset)
+
             decodeHeader()
             decodeSolutionSection()
             decodeExerciseSection()
@@ -44,6 +48,33 @@ class QRBinaryDecoder(private val byteArray: ByteArray) {
         }
     }
 
+    /**
+     * Dynamically calculate the starting position of data
+     * Parsing header：padding + continuation + security_profile + url + dialect + version + qrtree_header
+     */
+    private fun calculateDataStartOffset(bytes: ByteArray): Int {
+        var bitPos = 0
+
+        // Read all bits of the first byte and locate the first ‘1’ (fill in the end marker).
+        var foundEnd = false
+        for (byteIdx in bytes.indices) {
+            for (bitIdx in 7 downTo 0) {
+                val bit = (bytes[byteIdx].toInt() ushr bitIdx) and 1
+                bitPos++
+
+                if (bit == 1 && !foundEnd) {
+                    // Found the padding end marker '1'
+                    foundEnd = true
+                    // Skip fixed header：continuation(1) + security_profile(4) + url(1) + dialect(4) + version(4) + qrtree_header(1) = 15 bits
+                    return bitPos + 15
+                }
+            }
+            // To prevent infinite loops, search a maximum of the first 3 bytes (24 bits).
+            if (byteIdx >= 2) break
+        }
+        // If not found, return the default value.
+        return 17
+    }
     /**
      * Decode header section containing labels and random generators
      */
