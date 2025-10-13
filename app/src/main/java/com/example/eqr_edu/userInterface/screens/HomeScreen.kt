@@ -70,7 +70,7 @@ fun HomePage(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "🏠 ${languageViewModel.stringResource("home_page")} 🌟",
+                    text = "🏠 ${languageViewModel.stringResource("home_page")} ",
                     fontSize = config.titleFontSize,
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFF2E7D32),
